@@ -8,10 +8,9 @@ export const submitForm = (userForm) => {
         type: SUBMIT_FORM,
         payload: new Promise((resolve, reject) => {
             setTimeout(() => {
-                alert('SUCCESS: Score with user name is sent to server.')
+                alert('Storing score is a work in progress :)')
                 resolve();
             }, 1000);
-            console.log("Form Data: ",userForm)
         })
     };
 }
