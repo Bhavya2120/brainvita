@@ -1,4 +1,4 @@
-# BrainVita (brainvita.vercel.app)
+# BrainVita ([brainvita.vercel.app](https://brainvita.vercel.app/))
 
 BrainVita (also known as Peg Solitaire) is a classic mind game, played by a single player.
 
