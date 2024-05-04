@@ -4,7 +4,6 @@ import isEmpty from 'lodash/isEmpty';
 import cloneDeep from 'lodash/cloneDeep';
 import { marblePicked, marbleReleased, marbleDropped, marbleRemoved, resetBoard } from '../../actions/appActions';
 import { OCCUPIED, VACANT } from '../../const/boardConstants';
-import Header from '../../components/header/Header';
 import Board from '../../components/board/Board';
 import Form from '../form/Form';
 
@@ -96,11 +95,15 @@ class App extends React.Component {
       const isHoriontalMove = pickedMarble.x === x; // get if desired move is horizontal
       if (isHoriontalMove) {
         // check if horizontal distance between picked marble and select vacant place is 2 and in middle marble is present
+        //eslint-disable-next-line
         return Math.abs(pickedMarble.y - y) == 2
+        //eslint-disable-next-line
           && this.props.boardStatus[pickedMarble.x][pickedMarble.y < y ? pickedMarble.y + 1 : pickedMarble.y - 1] == OCCUPIED
       } else {
         // check if vertical distance between picked marble and select vacant place is 2 and in middle marble is present
+        //eslint-disable-next-line
         return Math.abs(pickedMarble.x - x) == 2
+        //eslint-disable-next-line
           && this.props.boardStatus[pickedMarble.x < x ? pickedMarble.x + 1 : pickedMarble.x - 1][pickedMarble.y] == OCCUPIED
       }
     }
@@ -169,7 +172,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header/>
+        <Form noOfMarblesLeft={this.state.noOfMarblesLeft}/>
+        <br/><br/>
         <Board 
           boardStatus={this.props.boardStatus}
           message={this.state.message}
@@ -177,7 +181,7 @@ class App extends React.Component {
           onMarbleClick={this.onMarbleClick.bind(this)}
           onVacantPlaceClick={this.onVacantPlaceClick.bind(this)}
           onGameRestart={this.onGameRestart.bind(this)}/>
-          <Form noOfMarblesLeft={this.state.noOfMarblesLeft}/>
+          
       </div>
     );
   }

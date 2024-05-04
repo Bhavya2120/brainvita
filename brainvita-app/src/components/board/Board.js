@@ -8,7 +8,7 @@ const Board = (props) => {
         <React.Fragment>
             <h3 className="no-margin text-center">Marbles Left</h3>
             <h2 className="no-margin text-center">{props.noOfMarblesLeft}</h2>
-            <p className="text-center" id={boardStyle.errorMessage}>{props.message}</p>
+            <br/>
             <div className={boardStyle.boardContainer}>
                 <div className={boardStyle.board}>
                     {props.boardStatus.map((row, x) => {
@@ -36,6 +36,7 @@ const Board = (props) => {
                         );
                     })}
                 </div>
+                <p className="text-center" id={boardStyle.errorMessage}>{props.message}</p>
                 <button id={boardStyle.resetButton} onClick={props.onGameRestart}>Restart</button>
             </div>
         </React.Fragment>

@@ -8,6 +8,7 @@ const defaultState = {
 }
 
 const appReducer = (state = defaultState, action) => {
+    //eslint-disable-next-line
     switch (action.type) {
         case types.MARBLE_PICKED: // action when marble is picked
             state.boardStatus[action.payload.x][action.payload.y] =  PICKED;
