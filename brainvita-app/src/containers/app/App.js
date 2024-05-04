@@ -6,6 +6,8 @@ import { marblePicked, marbleReleased, marbleDropped, marbleRemoved, resetBoard 
 import { OCCUPIED, VACANT } from '../../const/boardConstants';
 import Board from '../../components/board/Board';
 import Form from '../form/Form';
+import Footer from '../../components/footer/Footer';
+import './StyledText.css';
 
 class App extends React.Component {
 
@@ -172,6 +174,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <div className = 'introduction'>
+          <h2>Welcome to BrainVita!</h2>
+        </div>
         <Form noOfMarblesLeft={this.state.noOfMarblesLeft}/>
         <br/><br/>
         <Board 
@@ -181,7 +186,7 @@ class App extends React.Component {
           onMarbleClick={this.onMarbleClick.bind(this)}
           onVacantPlaceClick={this.onVacantPlaceClick.bind(this)}
           onGameRestart={this.onGameRestart.bind(this)}/>
-          
+          <Footer/>
       </div>
     );
   }

@@ -1,0 +1,14 @@
+.footer {
+    margin-top: 25px;
+    background-color: #ccc; /* Grey background color */
+    padding: 10px; /* Add padding for spacing */
+  }
+  
+  .footer h3 {
+    margin: 0; /* Remove default margin for the heading */
+  }
+
+  .footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  

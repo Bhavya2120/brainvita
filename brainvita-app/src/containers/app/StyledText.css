@@ -1,0 +1,17 @@
+.introduction {
+    position: relative;
+    text-align: center;
+  }
+  
+  .introduction h2 {
+    font-family: 'Arial Black', sans-serif;
+    color: #fdce61;
+    background-image: linear-gradient(to right, #1aff38, #0e5bff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+body{
+    background: linear-gradient(135deg, #e5f6ff, #d4ecff, #c1e1ff);
+}
